@@ -41,7 +41,7 @@ class App extends React.Component {
           </a>
         </header>
         <div className='fetch-api'>
-            <p>Message: {this.state.apiResponse}</p>
+            <p>MESSAGE: {this.state.apiResponse}</p>
         </div>
       </div>
     );
