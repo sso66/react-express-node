@@ -20,6 +20,10 @@
     - javascripts
     - stylesheets
   - routes/
+    - index.js
+    - messages.js
+    - testAPI.js
+    - users.js
   - utils/
   - views/
   - app.js
