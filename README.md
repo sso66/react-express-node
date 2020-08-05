@@ -2,6 +2,6 @@
 ### Project Code Organization
 - api/
   - bin/
-    www
+    - www
 - public/
 - src/
