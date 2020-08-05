@@ -9,10 +9,20 @@
       - create_db.js
       - init_couch.js
     - models/
+      - messages
+      - users
     - views/
     - app.js
     - use_insert_test.js
-- app.js
-- README.md
+  - node_modules
+  - public/
+  - routes/
+  - utils/
+  - views/
+  - app.js
+  - favicon.ico
+  - package.json
+  - package-lock.json
+  - README.md
 - public/
 - src/
