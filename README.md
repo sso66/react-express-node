@@ -11,6 +11,15 @@
     - models/
       - messages.js
       - users.js
+    - services/
+      - getMessage.js
+      - saveMessage.js
+      - updateMessage.js
+      - deleteMessage.js
+      - getUser.js
+      - saveUser.js
+      - updateUser.js
+      - deleteUser.js
     - app.js
     - use_insert_test.js
   - node_modules/
