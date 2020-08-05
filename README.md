@@ -3,7 +3,7 @@
 - api/
   - bin/
     - www
-  - db
+  - db/
     - controllers/
       - couchdb.js
       - create_db.js
@@ -14,7 +14,7 @@
     - views/
     - app.js
     - use_insert_test.js
-  - node_modules
+  - node_modules/
   - public/
   - routes/
   - utils/
@@ -24,5 +24,6 @@
   - package.json
   - package-lock.json
   - README.md
+- node_modules/
 - public/
 - src/
