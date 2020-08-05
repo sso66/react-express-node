@@ -16,6 +16,9 @@
     - use_insert_test.js
   - node_modules/
   - public/
+    - images
+    - javascripts
+    - stylesheets
   - routes/
   - utils/
   - views/
