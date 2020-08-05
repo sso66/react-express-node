@@ -3,5 +3,7 @@
 - api/
   - bin/
     - www
+- app.js
+- README.md
 - public/
 - src/
