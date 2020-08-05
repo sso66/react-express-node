@@ -1,4 +1,4 @@
-## React-Express-Node-CouchDB
+## React-Express-Node-CouchDB Changelog
 ### Project Code Organization
 - api/
   - bin/
