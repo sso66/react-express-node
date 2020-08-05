@@ -5,6 +5,9 @@
     - www
   - db
     - controllers/
+      - couchdb.js
+      - create_db.js
+      - init_couch.js
     - models/
     - views/
     - app.js
