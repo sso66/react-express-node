@@ -9,16 +9,15 @@
       - create_db.js
       - init_couch.js
     - models/
-      - messages
-      - users
-    - views/
+      - messages.js
+      - users.js
     - app.js
     - use_insert_test.js
   - node_modules/
   - public/
-    - images
-    - javascripts
-    - stylesheets
+    - images/
+    - javascripts/
+    - stylesheets/
   - routes/
     - index.js
     - messages.js
@@ -26,6 +25,12 @@
     - users.js
   - utils/
   - views/
+    - error.jade
+    - index.jade
+    - layout.jade
+    - messages.jade
+    - testAPI.jade
+    - users.jade
   - app.js
   - favicon.ico
   - package.json
