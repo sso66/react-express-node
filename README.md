@@ -20,6 +20,7 @@
       - saveUser.js
       - updateUser.js
       - deleteUser.js
+    - views/
     - app.js
     - use_insert_test.js
   - node_modules/
