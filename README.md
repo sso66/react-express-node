@@ -1,5 +1,5 @@
-### React-Express/WebSocket-Node-CouchDB: Project-Agnostic IWA Seed
-#### Project Code Organization
+## React-Express/WebSocket-Node-CouchDB: Project-Agnostic IWA Seed
+### Project Code Organization
 - api/
   - bin/
     - www
@@ -38,9 +38,12 @@
       - create_db.js
       - init_couch.js
     - tests/
-      - messages_insert_test.js
-      - products_insert_test.js
-      - users_insert_test.js
+      - message_insert_test.js
+      - message_update.test.js
+      - product_insert_test.js
+      - product_update_test.js
+      - user_insert_test.js
+      - user_update_test
     - views/
       - index.js
       - messages.js
