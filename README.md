@@ -52,8 +52,12 @@
     - error.jade
     - index.jade
     - layout.jade
+    - message.jade
     - messages.jade
+    - product.jade
+    - products.jade
     - testAPI.jade
+    - user.jade
     - users.jade
   - app.js
   - favicon.ico
