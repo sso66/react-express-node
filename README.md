@@ -1,4 +1,4 @@
-## React-Express-Node-CouchDB Full Stack Changelog
+## React-Express-Node-CouchD: Eagleton IWA Seed
 ### Project Code Organization
 - api/
   - bin/
