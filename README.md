@@ -23,6 +23,8 @@
     - models/
       - message.js
       - message.json
+      - product.js
+      - product.json
       - user.js
       - user.json
     - schemas/
