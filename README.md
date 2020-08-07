@@ -14,8 +14,12 @@
       - updateUser.js
       - deleteUser.js
     - models/
-      - messages.js
-      - users.js
+      - message.js
+      - message.json
+      - user.js
+      - user.json
+    - schemas/
+      - user.js
     - services/
       - couchdb.js
       - create_db.js
