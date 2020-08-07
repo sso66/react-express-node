@@ -1,4 +1,4 @@
-## React-Express-Node-CouchD: Eagleton IWA Seed
+## React-Express-Node-CouchDB: Eagleton IWA Seed
 ### Project Code Organization
 - api/
   - bin/
