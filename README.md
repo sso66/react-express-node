@@ -34,7 +34,7 @@
       - create_db.js
       - init_couch.js
     - tests/
-      - use_insert_test.js    
+      - users_insert_test.js    
     - views/
     - app.js
   - node_modules/
