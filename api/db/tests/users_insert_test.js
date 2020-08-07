@@ -3,9 +3,9 @@
 // Note: Final Steps to Production
 
 
-console.log("db/users_insert_test.js...");
+console.log("db/test/users_insert_test.js...");
 
-var users = require('../models/users');
+var users = require('../models/user');
 
 var user = {  
     email: 'johndoe@example.com',

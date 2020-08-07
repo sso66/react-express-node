@@ -1,4 +1,4 @@
-// File: db/models/users.js
+// File: db/models/user.js
 // Date: 8/7/2020
 // Note: Final steps to Production
 
