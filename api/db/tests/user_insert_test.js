@@ -1,9 +1,8 @@
-// File: db/tests/users_insert_test.js
+// File: db/tests/user_insert_test.js
 // Date: 8/7/2020
 // Note: Final Steps to Production
 
-
-console.log("db/test/users_insert_test.js...");
+console.log("db/test/user_insert_test.js...");
 
 var users = require('../models/user');
 
@@ -18,7 +17,7 @@ users.create(user, function(err) {
       throw err;
     }
   else {
-      console.log('user inserted');
+      console.log('user document inserted into CouchDB server');
   }
 });
 
