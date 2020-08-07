@@ -5,21 +5,24 @@
     - www
   - db/
     - controllers/
+      - deleteMessage.js
+      - deleteProduct.js
+      - deleteUser.js
       - getMessage.js
       - getMessages.js
-      - saveMessage.js
-      - updateMessage.js
-      - deleteMessage.js
       - getProduct.js
       - getProducts.js
-      - saveProduct.js
-      - updateProduct.js
-      - deleteProduct.js
       - getUser.js
       - getUsers.js
-      - saveUser.js
+      - updateMessage.js
+      - updateProduct.js
       - updateUser.js
-      - deleteUser.js
+      - saveMessage.js
+      - saveProduct.js
+      - saveUser.js
+    - errors/
+      - errors.js
+      - expressBoom.js
     - models/
       - message.js
       - message.json
@@ -28,14 +31,21 @@
       - user.js
       - user.json
     - schemas/
+      - index.js
       - user.js
     - services/
       - couchdb.js
       - create_db.js
       - init_couch.js
     - tests/
-      - users_insert_test.js    
+      - messages_insert_test.js
+      - products_insert_test.js
+      - users_insert_test.js
     - views/
+      - index.js
+      - messages.js
+      - products.js
+      - users.js
     - app.js
   - node_modules/
   - public/
