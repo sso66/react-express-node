@@ -1,6 +1,6 @@
-// File: db/controllers/couchdb.js
-// Date: 8/6/2020
-// Note: Final steps to Production
+// File: db/services/couchdb.js
+// Date: 8/7/2020
+// Note: Final Steps to Production: Admin Party!
 
 console.log('Connecting CouchDB couchdb.js...');
 

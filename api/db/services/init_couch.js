@@ -1,13 +1,13 @@
-// File: db/controllers/init_couch.js
-// Date: 8/6/2020
-// Note: Final steps to Production
+// File: db/services/init_couch.js
+// Date: 8/7/2020
+// Note: Final Steps to Production: Admin Party!
 
 console.log("Initializing databases CouchDB init_couch.js...");
 
 var async = require('async');  
 var couch = require('./couchdb');
 
-var databases = ['home', 'about', 'products', 'contact'];
+var databases = ['contacts', 'messages', 'users'];
 
 module.exports = initCouch;
 
@@ -18,6 +18,7 @@ function initCouch(cb) {
 function createDatabases(cb) {  
     async.each(databases, createDatabase, cb);
 }
+
 function createDatabase(db, cb) {  
     couch.db.create(db, function(err) {
         if (err && err.statusCode == 412) {
