@@ -5,13 +5,6 @@
     - www
   - db/
     - controllers/
-      - couchdb.js
-      - create_db.js
-      - init_couch.js
-    - models/
-      - messages.js
-      - users.js
-    - services/
       - getMessage.js
       - saveMessage.js
       - updateMessage.js
@@ -20,9 +13,17 @@
       - saveUser.js
       - updateUser.js
       - deleteUser.js
+    - models/
+      - messages.js
+      - users.js
+    - services/
+      - couchdb.js
+      - create_db.js
+      - init_couch.js
+    - tests/
+      - use_insert_test.js    
     - views/
     - app.js
-    - use_insert_test.js
   - node_modules/
   - public/
     - images/
