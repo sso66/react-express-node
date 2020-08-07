@@ -2,12 +2,12 @@
 // Date: 8/7/2020
 // Note: Final Steps to Production: Admin Party!
 
-console.log("Initializing databases CouchDB init_couch.js...");
+console.log("Initializing databases CouchDB db/services/init_couch.js...");
 
 var async = require('async');  
 var couch = require('./couchdb');
 
-var databases = ['contacts', 'messages', 'users'];
+var databases = ['test1', 'test2', 'test3'];
 
 module.exports = initCouch;
 

@@ -2,11 +2,11 @@
 // Date: 8/7/2020
 // Note: Final Steps to Production: Admin Party!
 
-console.log("Creating database in CouchDB: init_couch.js...");
+console.log("Creating database in CouchDB: db/services/init_couch.js...");
 
 var couch = require('./couchdb');
 
-couch.db.create('eagleton', function(err) {  
+couch.db.create('users', function(err) {  
     if (err && err.statusCode !== 412) {
         console.error(err);
     }
