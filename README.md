@@ -6,10 +6,17 @@
   - db/
     - controllers/
       - getMessage.js
+      - getMessages.js
       - saveMessage.js
       - updateMessage.js
       - deleteMessage.js
+      - getProduct.js
+      - getProducts.js
+      - saveProduct.js
+      - updateProduct.js
+      - deleteProduct.js
       - getUser.js
+      - getUsers.js
       - saveUser.js
       - updateUser.js
       - deleteUser.js
