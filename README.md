@@ -1,4 +1,4 @@
-## React-Express | WebSocket-Node-CouchDB: Project-Agnostic IWA Seed
+## React-Express/WebSocket-Node-CouchDB: Project-Agnostic IWA Seed
 ### Project Code Organization
 - api/
   - bin/
