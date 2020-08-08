@@ -21,6 +21,9 @@
       - saveMessage.js
       - saveProduct.js
       - saveUser.js
+    - docs/
+      - crud.txt
+      - curl.txt
     - errors/
       - error.js
       - expressBoom.js
