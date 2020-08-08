@@ -1,5 +1,7 @@
 // route_test.js
 
+console.log("Mounting route_test.js...");
+
 var express = require('express'),
     router = express.Router()
 
@@ -32,3 +34,5 @@ router.get('/recent', function(req, res) {
 });
 
 module.exports = router
+
+// eof

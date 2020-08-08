@@ -1,5 +1,7 @@
 // model_test.js
 
+console.log("Mounting model_test.js...");
+
 var db = require('./resource_test'),
     DATABASE = 'comments'
 

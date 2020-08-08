@@ -1,6 +1,6 @@
 // resource_test.js
 
-console.log("Mounting querystring_test.js...");
+console.log("Mounting resource_test.js...");
 
 var request = require('request'),
     querystring = require('querystring');
@@ -42,8 +42,9 @@ exports.all = function(db, options, done) {
       }, function(err, res, body) {
         if (err) return done('Unable to connect to CouchDB')
             done(null, body)
+			
+		console.log("body: " + body);
     });
-    console.log("body: " + body);
 };
 
 // eof

@@ -1,5 +1,7 @@
 // controller_test.js
 
+console.log("Mounting controller_test.js...");
+
 var express = require('express'),
     router = express.Router()
 
