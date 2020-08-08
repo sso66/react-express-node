@@ -1,0 +1,52 @@
+// docs/crud.txt
+The solution is to change the single quotes to double quotes and escape properly 
+queue double quotes inside the data:
+
+1. Creating contacts Database (Collection) on the CouchDB server
+C:\Users\Owner>curl -X PUT http://127.0.0.1:5984/contacts
+
+
+2. Creating Documents in contacts Database (Collection)
+C:\Users\Owner>curl -X PUT http://127.0.0.1:5984/contacts/joelennon/ -d {}
+{"ok":true,"id":"joelennon","rev":"1-967a00dff5e02add41819138abb3284d"}
+
+C:\Users\Owner>curl -X PUT http://127.0.0.1:5984/contacts/stephenoo/ -d {}
+{"_id":"stephenoo","_rev":"1-967a00dff5e02add41819138abb3284d"}
+
+
+3. Getting a Document from the contacts Database (Collection)
+C:\Users\Owner>curl -X GET http://127.0.0.1:5984/contacts/joelennon
+{"_id":"joelennon","_rev":"1-967a00dff5e02add41819138abb3284d"}
+
+C:\Users\Owner>curl -X GET http://127.0.0.1:5984/contacts/stephenoo
+{"_id":"stephenoo","_rev":"1-967a00dff5e02add41819138abb3284d"}
+
+
+4. REQUEST (curl): URL object
+C:\Users\Owner>curl -X POST -d "{\"firstName\": \"Joe\", \"lastName\": \"Lennon\", \"email\":\"joe@joelennon.ie\"}" -H "Content-Type:application/json" http://127.0.0.1:5984/contacts
+
+C:\Users\Owner>curl -X POST -d "{\"firstName\": \"Stephen\", \"lastName\": \"Oo\", \"email\":\"sun.stephen.oo@gmail.com\"}" -H "Content-Type:application/json" http://127.0.0.1:5984/contacts
+
+
+5. RESPONSE (CouchDB): JSON object
+C:\Users\Owner>curl -X GET http://127.0.0.1:5984/contacts/joelennon
+{"_id":"joelennon","_rev":"4-1a97a42bb3d19dd450db14a3b994efbc","title":"Technical Book Author, CouchDB"}
+
+C:\Users\Owner>curl -X GET http://127.0.0.1:5984/contacts/stephenoo
+{"_id":"stephenoo","_rev":"2-fc4ee0707d90cb845fb15f28a0aa27d5","title":"UI/UX Archtect - Eagleton IWA Project"}
+
+// Analysis on how to assign the object id in CouchDB context
+C:\Users\Owner>curl -X PUT http://127.0.0.1:5984/contacts/sun.stephen.oo@gmail.com -d {}
+{"ok":true,"id":"sun.stephen.oo@gmail.com","rev":"1-967a00dff5e02add41819138abb3284d"}
+
+
+C:\Users\Owner>curl -X GET http://127.0.0.1:5984/contacts/sun.stephen.oo@gmail.com
+{"_id":"sun.stephen.oo@gmail.com","_rev":"1-967a00dff5e02add41819138abb3284d"}
+
+1. REQUEST (curl): URL object
+C:\Users\Owner>curl -X POST -d "{\"firstName\": \"Stephen\", \"lastName\": \"Oo\", \"email\":\"sun.stephen.oo@gmail.com\"}" -H "Content-Type:application/json" http://127.0.0.1:5984/contacts
+{"ok":true,"id":"654f3a59f8ed458bfb43392c480119a9","rev":"1-d6f4d919b92128bc9db7230deb78ae3f"}
+
+2. RESPONSE (CouchDB): JSON object "after UPDATE...
+C:\Users\Owner>curl -X GET http://127.0.0.1:5984/contacts/sun.stephen.oo@gmail.com
+{"_id":"sun.stephen.oo@gmail.com","_rev":"2-a8d9b6ae8772ae89beb1b4545c0e06cd","title":"UI/UX Architect - Senior Web Developer (Full Stack)"}
