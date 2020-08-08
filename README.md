@@ -24,6 +24,7 @@
     - docs/
       - crud.txt
       - curl.txt
+      - Nodes.js&CouchDB.pdf
     - errors/
       - error.js
       - expressBoom.js
