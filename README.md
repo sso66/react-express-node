@@ -1,5 +1,5 @@
 ## React-Express/WebSocket-Node-CouchDB: Project-Agnostic IWA Seed
-### Project Code Organization
+### Project Code Organization for Production
 - api/
   - bin/
     - www
@@ -14,6 +14,7 @@
       - getProducts.js
       - getUser.js
       - getUsers.js
+      - index.js
       - updateMessage.js
       - updateProduct.js
       - updateUser.js
@@ -23,32 +24,34 @@
     - errors/
       - error.js
       - expressBoom.js
+      - index.js
     - models/
+      - index.js
       - message.js
       - message.json
+      - messages.json
       - product.js
       - product.json
+      - products.js
       - user.js
       - user.json
+      - users.js
     - schemas/
       - index.js
       - user.js
     - services/
       - couchdb.js
       - create_db.js
+      - index.js
       - init_couch.js
     - tests/
+      - index.js
       - message_insert_test.js
       - message_update.test.js
       - product_insert_test.js
       - product_update_test.js
       - user_insert_test.js
       - user_update_test
-    - views/
-      - index.js
-      - messages.js
-      - products.js
-      - users.js
     - app.js
   - node_modules/
   - public/
