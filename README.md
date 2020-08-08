@@ -21,7 +21,7 @@
       - saveProduct.js
       - saveUser.js
     - errors/
-      - errors.js
+      - error.js
       - expressBoom.js
     - models/
       - message.js
