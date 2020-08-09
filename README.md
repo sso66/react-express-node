@@ -57,6 +57,8 @@
       - user_insert_test.js
       - user_update_test
     - app.js
+  - lib/
+    - fortune.js
   - node_modules/
   - public/
     - images/
