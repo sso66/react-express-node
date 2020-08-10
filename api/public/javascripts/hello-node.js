@@ -1,0 +1,19 @@
+// public/javascripts/hello-node.js
+
+console.log("Mounting hello-node.js...");
+
+var http = require('http');
+var port = 8180;
+
+function handle_request(request, response) {
+    response.writeHead(200, { 'Content-Type': 'text/plain' });
+    response.end('Hello World - Are you restless to go restful?\n');
+    console.log('requested')
+}
+
+// Node.js HTTP module to start listening for the incoming request on
+// port 8180.
+http.createServer(handle_request).listen(port, '127.0.0.1');
+console.log('Started Node.js http server at http://localhost:' + port);
+
+// eof

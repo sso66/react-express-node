@@ -3,10 +3,10 @@
 console.log("Mounting fortune.js...");
 
 var fortuneCookies = [
-    "Conquer your fears of they will conquer you.",
-    "Riverss need springs.",
+    "Conquer your fears or they will conquer you.",
+    "Rivers need springs.",
     "Do not fear what you don't know.",
-    "You will have a pleasant supprise.",
+    "You will have a pleasant suprise.",
     "Whenever possible, keep it simple."
 ];
 
