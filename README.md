@@ -57,12 +57,24 @@
       - user_insert_test.js
       - user_update_test
     - app.js
-  - lib/
-    - fortune.js
   - node_modules/
   - public/
     - images/
     - javascripts/
+      - public/
+        - images
+          logo.gif
+        - 404.html
+        - about.html
+        - home.html
+      - fortune.js
+      - hello-node.js
+      - hello-node-http-server.js
+      - helloWorld-1.js
+      - helloWorld-2.js
+      - helloWorld-3.js
+      - httpModule.js
+      - main.js
     - stylesheets/
   - routes/
     - index.js
@@ -74,13 +86,7 @@
     - error.jade
     - index.jade
     - layout.jade
-    - message.jade
-    - messages.jade
-    - product.jade
-    - products.jade
-    - testAPI.jade
-    - user.jade
-    - users.jade
+
   - app.js
   - favicon.ico
   - package.json
