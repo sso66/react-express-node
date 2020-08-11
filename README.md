@@ -3,6 +3,11 @@
 - api/
   - bin/
     - www
+  - caches
+    - movies/
+      - db.json
+    - n2kview/
+      - default.json
   - db/
     - controllers/
       - deleteMessage.js
