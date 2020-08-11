@@ -45,6 +45,16 @@
       - user.js
       - user.json
       - users.js
+    - prototypes/
+      - index.js
+      - message_insert_test.js
+      - message_update.test.js
+      - product_insert_test.js
+      - product_update_test.js
+      - user_insert_test.js
+      - user_update_test
+    - routes/
+      - index.js
     - schemas/
       - index.js
       - user.js
@@ -53,14 +63,6 @@
       - create_db.js
       - index.js
       - init_couch.js
-    - tests/
-      - index.js
-      - message_insert_test.js
-      - message_update.test.js
-      - product_insert_test.js
-      - product_update_test.js
-      - user_insert_test.js
-      - user_update_test
     - app.js
   - node_modules/
   - public/
