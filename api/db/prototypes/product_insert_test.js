@@ -1,3 +1,3 @@
-// File: db/tests/message_insert_test.js
+// File: db/prototypes/product_insert_test.js
 // Date: 8/7/2020
 // Note: Final Steps to Production

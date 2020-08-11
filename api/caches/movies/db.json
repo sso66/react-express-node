@@ -1,0 +1,16 @@
+{
+    "movies": [
+        { 
+            "id": 1,
+            "name": "The Godfather",
+            "director": "Francis Ford Coppola",
+            "rating": 8.8
+        },
+        { 
+            "id": 2,
+            "name": "Casablanca",
+            "director": "Michael Curtz",
+            "rating": 9.1
+        }
+    ]
+}
