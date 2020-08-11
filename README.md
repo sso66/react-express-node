@@ -4,10 +4,7 @@
   - bin/
     - www
   - caches
-    - movies/
-      - db.json
-    - n2kview/
-      - default.json
+    - default.json
   - db/
     - controllers/
       - deleteMessage.js
