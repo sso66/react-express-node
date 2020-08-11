@@ -3,8 +3,9 @@
 - api/
   - bin/
     - www
-  - caches
-    - movies.json
+  - caches /
+    - default.json
+    - movies.js
     - employees.js
   - db/
     - controllers/
@@ -27,7 +28,6 @@
     - docs/
       - crud.txt
       - curl.txt
-      - Nodes.js&CouchDB.pdf
     - errors/
       - error.js
       - expressBoom.js
