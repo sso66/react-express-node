@@ -91,7 +91,10 @@
     - error.jade
     - index.jade
     - layout.jade
-
+  - ws/
+    - bin/
+      www
+    - index.js
   - app.js
   - favicon.ico
   - package.json
