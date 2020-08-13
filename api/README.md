@@ -1,7 +1,7 @@
 ## Common Middleware: Node.js Express v4.16.1 
 
 - connect `NPM - always install it along side Express`
-- cookie-parser
+- cookie-parser `NPM - convenience middleware that simply links in **json**
 - cookie-session
 - csurf
 - debug
