@@ -109,7 +109,7 @@
 - public/
 - src/
   - components/
-    - Chat/
+    - ChatRoom/
       - Chat.jsx
       - Chat.sass
       - ChatInput.jsx
