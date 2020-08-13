@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Chat from './components/Chat/Chat';
 
 class App extends React.Component {
   constructor(props) {
@@ -43,6 +44,7 @@ class App extends React.Component {
         <div className='fetch-api'>
             <p>messages: {this.state.apiResponse}</p>
         </div>
+        <Chat />
       </div>
     );
 
