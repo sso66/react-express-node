@@ -65,6 +65,12 @@
   - node_modules/
   - public/
     - images/
+      - arch.jpg
+      - favicon.ico
+      - octalhex.git
+      - octalhex-alpha.png
+      - octalhex-opaque.png
+      - planet-earth.png
     - javascripts/
       - public/
         - images
@@ -83,7 +89,6 @@
     - stylesheets/
   - routes/
     - index.js
-    - messages.js
     - testAPI.js
     - users.js
   - utils/
@@ -92,11 +97,10 @@
     - index.jade
     - layout.jade
   - ws/
-    - bin/
-      www
-    - index.js
+    - bin/  
+      - www
+      - index.js
   - app.js
-  - favicon.ico
   - package.json
   - package-lock.json
   - README.md
