@@ -107,3 +107,11 @@
 - node_modules/
 - public/
 - src/
+  - components/
+    - Chat/
+      - Chat.jsx
+      - Chat.sass
+      - ChatInput.jsx
+      - ChatMessage.jsx
+      - index.jsx
+   - README.md
