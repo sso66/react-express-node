@@ -100,6 +100,7 @@
     - bin/  
       - www
       - index.js
+    - server.js
   - app.js
   - package.json
   - package-lock.json
