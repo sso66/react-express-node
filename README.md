@@ -121,5 +121,5 @@
       - index.jsx
     - Site/
    - constants/
-   //...
+  /...
    - README.md
