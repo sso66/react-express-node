@@ -89,6 +89,8 @@
       - httpModule.js
       - main.js
     - stylesheets/
+      - reset.css
+      - style.css
   - routes/
     - index.js
     - testAPI.js
@@ -101,7 +103,6 @@
   - websocket/
     - bin/  
       - www
-    - index.js
     - constants/
     - server.js
   - app.js
@@ -112,13 +113,13 @@
 - public/
 - src/
   - components/
-    - ChatBox/
     - ChatRoom/
       - Chat.jsx
       - Chat.sass
       - ChatInput.jsx
       - ChatMessage.jsx
       - index.jsx
+    - Site/
    - constants/
    ...
    - README.md
