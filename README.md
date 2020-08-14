@@ -121,5 +121,11 @@
       - index.jsx
     - Site/
    - constants/
-  /...
+  - views/
+    - Dashboard/
+      - index.jsx
+    - Home/
+      - index.jsx
+    - Login
+      - index.jsx
    - README.md
