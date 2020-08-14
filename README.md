@@ -98,10 +98,10 @@
     - error.jade
     - index.jade
     - layout.jade
-  - ws/
+  - websocket/
     - bin/  
       - www
-      - index.js
+    - index.js
     - constants/
     - server.js
   - app.js
