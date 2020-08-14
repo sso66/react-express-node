@@ -6,7 +6,7 @@ console.log("Mounting WebSocket server.js...\n");
 
 const WebSocket = require('ws');
 
-const wss = new WebSocket.Server({ port: 3030 });
+const wss = new WebSocket.Server({ port: 3000 });
 
 wss.on('connection', function connection(ws) {
     ws.on('message', function incoming(data) {

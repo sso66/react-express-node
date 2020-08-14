@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Chat from './components/Chat/Chat';
+import Chat from './components/ChatRoom/Chat';
 
 class App extends React.Component {
   constructor(props) {

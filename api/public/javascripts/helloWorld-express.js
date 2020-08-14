@@ -1,20 +1,21 @@
-// File: api/helloWorld-express.js
-// Date: 8/10/2020
+// File: public/javascripts/helloWorld-express.js
+// Date: 8/14/2020
 // Note: Servicing/Routing/Resourcing/Rendering
 // Pattern: Communication/Activation/Navigation/Projection
+// Author: Nathan Brown - bin/app.js prototype
 
-console.log("Mounting helloWorld-express.js");
+console.log("Mounting helloWorld-express.js...\n");
 
 var express = require('express');
 var path = require('path');
 
 var app = express();
 
-app.set('port', process.env.PORT | 3000);
+app.set('port', process.env.PORT | 9000);
 
 // view engine setup
-// app.set('views', path.join(__dirname, 'views'));
-// app.set('view engine', 'jade');
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
 
 app.get('/', function(req, res) {
     res.type('text/plain');
