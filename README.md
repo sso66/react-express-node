@@ -7,6 +7,7 @@
     - default.json
     - movies.js
     - employees.js
+  - constants/
   - db/
     - controllers/
       - deleteMessage.js
@@ -84,6 +85,7 @@
       - helloWorld-1.js
       - helloWorld-2.js
       - helloWorld-3.js
+      - helloWorld-express.js
       - httpModule.js
       - main.js
     - stylesheets/
@@ -100,6 +102,7 @@
     - bin/  
       - www
       - index.js
+    - constants/
     - server.js
   - app.js
   - package.json
@@ -109,10 +112,13 @@
 - public/
 - src/
   - components/
+    - ChatBox/
     - ChatRoom/
       - Chat.jsx
       - Chat.sass
       - ChatInput.jsx
       - ChatMessage.jsx
       - index.jsx
+   - constants/
+   ...
    - README.md
