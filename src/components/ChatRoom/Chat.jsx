@@ -2,7 +2,7 @@ import React from 'react';
 import ChatInput from './ChatInput'
 import ChatMessage from './ChatMessage'
 
-const URL = 'ws://localhost:3000'
+const URL = 'ws://localhost:3030'
 
 class Chat extends React.Component {
   state = {
@@ -66,7 +66,7 @@ class Chat extends React.Component {
             key={index}
             message={message.message}
             name={message.name}
-          />,
+          />
         )}
       </div>
     )

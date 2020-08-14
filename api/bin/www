@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
-console.log("Mounting Node.js Express...\n");
+/* console.log("Mounting Node.js Express...\n"); */
+
 /**
  * Module dependencies.
  */

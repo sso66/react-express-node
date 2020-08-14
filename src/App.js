@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import Chat from './components/ChatRoom/Chat';
 
+const URL = "http://localhost:9000/testAPI";
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -15,7 +17,7 @@ class App extends React.Component {
   callAPI() {
     console.log("callAPI...");
 
-    fetch("http://localhost:9000/testAPI")
+    fetch(URL)
       .then(res => res.text())
       .then(res => this.setState({ apiResponse: res }));
   }
@@ -42,7 +44,7 @@ class App extends React.Component {
           </a>
         </header>
         <div className='fetch-api'>
-            <p>messages: {this.state.apiResponse}</p>
+            <p>Message: {this.state.apiResponse}</p>
         </div>
         <Chat />
       </div>
