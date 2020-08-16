@@ -1,5 +1,6 @@
-## React-Express-Node-CouchDB: Project-Agnostic IWA
+## React-Express-Node-CouchDB
 ### Project Code Organization for Production
+### Eagleton Web App Consulting...Real-Time Web, Delivered
 - api/
   - bin/
     - www
