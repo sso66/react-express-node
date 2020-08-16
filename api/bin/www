@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
-/* console.log("Mounting Node.js Express...\n"); */
-
+console.log("Mounting Node.js Express...PORT:9000\n"); 
 /**
  * Module dependencies.
  */
