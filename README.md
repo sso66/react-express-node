@@ -108,7 +108,7 @@
       - connection_server.js
       - editor_server.js
       - constants/
-    - client.js
+    - nodejs_client.js
     - w3cwebsocket.js
   - app.js
   - package.json
