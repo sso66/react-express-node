@@ -3,7 +3,7 @@
 ### Eagleton Web App Consulting...Real-Time Web, Delivered
 - api/
   - bin/
-    - www (index.js)
+    - www (a.k.a. index.js)
   - caches /
     - default.json
     - movies.js
@@ -103,13 +103,13 @@
     - layout.jade
   - websockets/
     - bin/  
-      - www (echo_protocol_server.js)
+      - www (a.k.a. echo_protocol_server.js)
       - chat_server.js
       - connection_server.js
       - editor_server.js
       - constants/
-    - nodejs_client.js
-    - w3c_websocket.js
+    - nodejs_client.js (a.k.a echo_client.js
+    - w3c_websocket_client.js (a.k.a echo_client.js)
   - app.js
   - package.json
   - package-lock.json
