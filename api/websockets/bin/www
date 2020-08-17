@@ -1,6 +1,6 @@
 #!/websocket/bin/env node
 
-// websockets/bin/www
+// websockets/bin/www - a.k.a echo_server.js
 // WebSocket server implementation with 'websocket' NPM
 // WebSocket Client & Server Implementation for Node.js
 
