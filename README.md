@@ -126,6 +126,8 @@
       - index.jsx
     - CopyEditor/
     - EchoChamber/
+      - Echo.jsx
+      - Echo.sass
     - RealTimeWeb/
     - Site/
    - constants/
