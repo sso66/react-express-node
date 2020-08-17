@@ -4,6 +4,8 @@
 // WebSocket server implementation with 'websocket' NPM
 // WebSocket Client & Server Implementation for Node.js
 
+// A server that echos back anything sent to it, whatever utf-8 or binary.
+
 console.log("Mounting websocket/bin/www...\n\n");
 
 var WebSocketServer = require('websocket').server;
