@@ -1,5 +1,6 @@
-// File: chat_server.js
+// File: nodejs_client.js
 // Date: 8/17/2020
 // Note: WebSocket server implementation with 'websocket' NPM
 
-// How to go real-time with Node and React?
+// A simple Node.js client using W3C WebSocket API with echo-protocol.
+
