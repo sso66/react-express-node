@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Chat from './components/ChatRoom/Chat';
+import Echo from './components/EchoChamber/Echo';
 
 const URL = "http://localhost:9000/testAPI";
 
@@ -47,6 +48,7 @@ class App extends React.Component {
             <p>Message: {this.state.apiResponse}</p>
         </div>
         <Chat />
+        <Echo />
       </div>
     );
 

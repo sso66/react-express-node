@@ -46,7 +46,7 @@ class Chat extends React.Component {
 
   render() {
     return (
-      <div className='chat'>
+      <div className='echo'>
         <label htmlFor="name">
           Name:&nbsp;
           <input

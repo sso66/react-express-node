@@ -1,12 +1,12 @@
 #!/websocket/bin/env node
 
-// websockets/bin/www - a.k.a echo_server.js: 8/17/2020
+// websockets/bin/www - a.k.a echo_protocol_server.js: 8/17/2020
 // WebSocket server implementation with 'websocket' NPM
 // WebSocket Client & Server Implementation for Node.js
 
 // A server that echos back anything sent to it, whatever utf-8 or binary.
 
-console.log("Mounting websocket/bin/www...\n\n");
+console.log("\nMounting websocket/bin/www (a.k.a echo_protocol_server)...");
 
 var WebSocketServer = require('websocket').server;
 var http = require('http');
