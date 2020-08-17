@@ -1,8 +1,8 @@
-// File: server.js
-// Date: 8/13/2020
+// File: chat_server.js
+// Date: 8/17/2020
 // Note: WebSocket server
 
-console.log("Mounting WebSocket server.js...\n");
+console.log("Mounting WebSocket chat_server.js...\n");
 
 const WebSocket = require('ws');
 
