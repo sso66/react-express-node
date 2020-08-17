@@ -6,7 +6,7 @@ const URL = 'ws://localhost:3030'
 
 class Chat extends React.Component {
   state = {
-    name: 'Bob',
+    name: 'Jack',
     messages: [],
   }
 
