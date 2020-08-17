@@ -1,6 +1,6 @@
 // File: chat_server.js
 // Date: 8/17/2020
-// Note: WebSocket server implementedc with ws NPM
+// Note: WebSocket server implementation with 'ws' NPM
 
 console.log("Mounting WebSocket chat_server.js...\n");
 

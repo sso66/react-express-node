@@ -1,5 +1,6 @@
 #!/websocket/bin/env node
 
+// websocket_client.js
 // WebSocket Client & Server Implementation for Node.js
 // This code demonstrates a client in Node.js, not in the browser
 console.log("Mounting websocket/bin/www...\n\n");

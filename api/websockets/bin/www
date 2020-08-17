@@ -1,5 +1,7 @@
 #!/websocket/bin/env node
 
+// websockets/bin/www
+// WebSocket server implementation with 'websocket' NPM
 // WebSocket Client & Server Implementation for Node.js
 
 console.log("Mounting websocket/bin/www...\n\n");
