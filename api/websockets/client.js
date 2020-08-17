@@ -1,9 +1,13 @@
 #!/websocket/bin/env node
 
-// websocket_client.js
+// File: websocket_client.js
+// Date: 8/17/2020
+// Note: A simple client that will print out any utf-8 messages it receives
+//        on the console, and periodically sends a random number.
+
 // WebSocket Client & Server Implementation for Node.js
 // This code demonstrates a client in Node.js, not in the browser
-console.log("Mounting websocket/bin/www...\n\n");
+console.log("Mounting websock_client.js...\n\n");
 
 var WebSocketClient = require('websocket').client;
  
