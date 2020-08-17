@@ -109,7 +109,7 @@
       - editor_server.js
       - constants/
     - nodejs_client.js
-    - w3cwebsocket.js
+    - w3c_websocket.js
   - app.js
   - package.json
   - package-lock.json
