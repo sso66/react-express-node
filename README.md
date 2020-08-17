@@ -101,11 +101,15 @@
     - error.jade
     - index.jade
     - layout.jade
-  - websocket/
+  - websockets/
     - bin/  
       - www
-    - constants/
-    - server.js
+      - chat_server.js
+      - connection_server.js
+      - editor_server.js
+      - constants/
+    - client.js
+    - w3cwebsocket.js
   - app.js
   - package.json
   - package-lock.json
@@ -120,6 +124,9 @@
       - ChatInput.jsx
       - ChatMessage.jsx
       - index.jsx
+    - CopyEditor/
+    - EchoChamber/
+    - RealTimeWeb/
     - Site/
    - constants/
   - views/
