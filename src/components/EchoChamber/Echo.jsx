@@ -1,6 +1,6 @@
 // File: components/EchoChamber/Echo.jsx
 // Date: 8/18/2020
-// Note: WebSocket server implementation with 'websocket' NPM
+// Note: WebSocket client implementation with 'websocket' NPM
 
 import React from 'react';
 import { w3cwebsocket as W3CWebSocket } from 'websocket';
