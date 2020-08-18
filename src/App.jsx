@@ -1,9 +1,13 @@
+// File: App.jsx
+// Date: 8/18/2020
+// Note: Main entry point to UI View
+
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
-import Chat from './components/ChatRoom/Chat';
+import './App.sass';
+// import Chat from './components/ChatRoom/Chat';
 import Echo from './components/EchoChamber/Echo';
-import Connection from './components/UserConnection/Connection';
+// import Connection from './components/UserConnection/Connection';
 
 const URL = "http://localhost:9000/testAPI";
 
@@ -34,7 +38,7 @@ class App extends React.Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+            Edit <code>src/App.jsx</code> and save to reload.
           </p>
           <a
             className="App-link"
@@ -48,9 +52,9 @@ class App extends React.Component {
         <div className='fetch-api'>
             <p>Message: {this.state.apiResponse}</p>
         </div>
-        <Chat />
+        {/* <Chat /> */}
         <Echo />
-        <Connection />
+        {/* <Connection /> */}
       </div>
     );
 
