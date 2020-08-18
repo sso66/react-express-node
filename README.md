@@ -103,11 +103,10 @@
     - layout.jade
   - websockets/
     - bin/  
-      - www (a.k.a. echo_protocol_server.js)
       - chat_server.js
       - connection_server.js
       - editor_server.js
-      - constants/
+      - www (a.k.a. echo_protocol_server.js)
     - nodejs_client.js (a.k.a echo_client.js
     - w3c_websocket_client.js (a.k.a echo_client.js)
   - app.js
@@ -125,10 +124,14 @@
       - ChatMessage.jsx
       - index.jsx
     - CopyEditor/
+      - EditorClient.css
+      - EditorClient.jsx
     - EchoChamber/
       - Echo.jsx
       - Echo.sass
     - UserAccount/
+      - Connection.jsx
+      - Connection.sass
     - Site/
    - constants/
   - views/
