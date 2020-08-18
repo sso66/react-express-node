@@ -1,6 +1,6 @@
 // File: components/UserAccount/Connection.jsx
 // Date: 8/17/2020
-// Note: WebSocket server implementation with 'websocket' NPM
+// Note: WebSocket client implementation with 'websocket' NPM
 
 import React from 'react';
 import { w3cwebsocket as W3CWebSocket } from 'websocket';
