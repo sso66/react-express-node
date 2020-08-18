@@ -1,8 +1,8 @@
 // File:w3c_websocket_client.js
-// Date: 8/17/2020
+// Date: 8/18/2020
 // Note: WebSocket server implementation with 'websocket' NPM
 
-console.log("Mounting w3c_websocket.js...\n\n");
+console.log("\nMounting w3c_websocket.js...");
 // A simple Node.js client using W3C WebSocket API with echo-protocol.
 
 const W3CWebSocket = require('websocket').w3cwebsocket;

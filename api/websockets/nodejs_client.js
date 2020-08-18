@@ -1,13 +1,11 @@
-#!/websocket/bin/env node
-
 // File: nodejs_client.js
-// Date: 8/17/2020
+// Date: 8/18/2020
 // Note: A simple Node.js client that will print out any utf-8 messages it receives
 //        on the console, and periodically sends a random number.
 
 // WebSocket Client & Server Implementation for Node.js
 // This code demonstrates a client in Node.js, not in the browser
-console.log("Mounting websock_client.js...\n\n");
+console.log("\nMounting nodejs_client.js...");
 
 var WebSocketClient = require('websocket').client;
  
@@ -22,12 +20,14 @@ client.on('connect', function(connection) {
     connection.on('error', function(error) {
         console.log("Connection Error: " + error.toString());
     });
+
     connection.on('close', function() {
         console.log('echo-protocol Connection Closed');
     });
-    connection.on('message', function(message) {
-        if (message.type === 'utf8') {
-            console.log("Received: '" + message.utf8Data + "'");
+
+    connection.on('message', function(event) {
+        if (event.type === 'utf8') {
+            console.log("Received: '" + event.utf8Data + "'");
         }
     });
     
