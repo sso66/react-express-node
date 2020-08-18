@@ -1,6 +1,6 @@
 ## React-Express-Node-CouchDB
 ### Project Code Organization for Production
-### Eagleton Web App Consulting...Real-Time Web, Delivered
+### Eagleton Web Consulting...Real-Time Web, Delivered
 - api/
   - bin/
     - www (a.k.a. index.js)
@@ -107,7 +107,7 @@
       - connection_server.js
       - editor_server.js
       - www (a.k.a. echo_protocol_server.js)
-    - nodejs_client.js (a.k.a echo_client.js
+    - nodejs_client.js (a.k.a echo_client.js)
     - w3c_websocket_client.js (a.k.a echo_client.js)
   - app.js
   - package.json
