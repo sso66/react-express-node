@@ -1,6 +1,6 @@
 // File: ChatMessage.jsx
-// Date: 8/13/2020
-// Note: Chat message component
+// Date: 8/18/2020
+// Note: Chat data component - UIViewModel
 
 import React from 'react';
 import './Chat.sass';

@@ -6,8 +6,9 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.sass';
 // import Chat from './components/ChatRoom/Chat';
-import Echo from './components/EchoChamber/Echo';
-// import Connection from './components/UserConnection/Connection';
+// import Echo from './components/EchoChamber/Echo';
+// import Connection from './components/UserAccount/Connection';
+import EditorClient from './components/CopyEditor/EditorClient';
 
 const URL = "http://localhost:9000/testAPI";
 
@@ -53,8 +54,9 @@ class App extends React.Component {
             <p>Message: {this.state.apiResponse}</p>
         </div>
         {/* <Chat /> */}
-        <Echo />
+        {/* <Echo /> */}
         {/* <Connection /> */}
+        <EditorClient />
       </div>
     );
 

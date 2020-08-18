@@ -16,6 +16,7 @@ console.log("\nMounting connection_server...");
 
 var WebSocketServer = require('websocket').server;
 var http = require('http');
+const { eventNames } = require('process');
 
 // Create list of User objects in an active Room object.
 var connections = {};
@@ -43,6 +44,7 @@ wsServer.on('request', function(request) {
     if (!originIsAllowed(request.origin)) {
         // make sure we only keep request from an allowed origin
         request.reject();
+       
         console.log(new Date() + ' Connection from origin ' + request.origin + ' rejected.');
         return;
     }
@@ -55,12 +57,7 @@ wsServer.on('request', function(request) {
 
     // Now you can access the connection with connection[id] and find out
     // the id for a connection with connection.id
-    console.log(new Date()) + ' Connection ID ' + connection.id + ' accepted.';
-
-    connection.on('message', function(data) {
-        console.log(connection.id)
-        broadcast(data.utf8Data);
-    });
+        console.log(new Date()) + ' Connection ID ' + connection.id + ' accepted.';
 
     connection.on('close', function(reasonCode, description) {
         console.log(new Date()) + ' Peer ' + connection.remoteAddress + ' disconnected ' +
@@ -68,6 +65,15 @@ wsServer.on('request', function(request) {
 
         // Make sure to remove closed connections from the global pool
         delete connections[connection.id];
+    });
+
+    // connection.on('message', function(event) {
+    //     broadcast(event.utf8Data);
+    // });
+
+    connection.on('message', function(event) {
+        console.log('room: ' + connection.id)
+        sendToConnectionId(connection.id, event.utf8Data)
     });
 });
 
@@ -82,7 +88,7 @@ function broadcast(data) {
     });
 }
 
-// Send message to a specific connection (client) by its connectionID
+// Send message to a specific connection by its connectionID
 function sendToConnectionId(connectionID, data) {
     var connection = connections[connectionID];
     if (connection && connection.connected) {
@@ -91,4 +97,3 @@ function sendToConnectionId(connectionID, data) {
 }
 
 // eof
-

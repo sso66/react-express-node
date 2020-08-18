@@ -1,6 +1,6 @@
 // File: ChatInput.jsx
 // Date: 8/13/2020
-// Note: Chat user input component
+// Note: Chat user input component - UIView
 
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -24,15 +24,15 @@ class ChatInput extends React.Component {
                     e.preventDefault()
                     this.props.onSubmitMessage(this.state.message)
                     this.setState({ message: '' })
-                }}
-            >
+                }}>
+
                 <input 
                     type="text"
                     placeholder={'Enter message...'}
                     value={this.state.message}
-                    onChange={e => this.setState({ message: e.target.value })}
-                />
+                    onChange={e => this.setState({ message: e.target.value })}/>
                 <input type="submit" value={'Send'} />
+                
             </form>
         )
     }

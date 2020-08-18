@@ -1,3 +1,7 @@
+// File: ChatMessage.jsx
+// Date: 8/18/2020
+// Note: Chat container component - UIViewController
+
 import React from 'react';
 import ChatInput from './ChatInput'
 import ChatMessage from './ChatMessage'
@@ -46,7 +50,7 @@ class Chat extends React.Component {
 
   render() {
     return (
-      <div className='echo'>
+      <div className='chat'>
         <label htmlFor="name">
           Name:&nbsp;
           <input
@@ -58,7 +62,6 @@ class Chat extends React.Component {
           />
         </label>
         <ChatInput
-          ws={this.ws}
           onSubmitMessage={messageString => this.submitMessage(messageString)}
         />
         {this.state.messages.map((message, index) =>
