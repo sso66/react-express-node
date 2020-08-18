@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Chat from './components/ChatRoom/Chat';
 import Echo from './components/EchoChamber/Echo';
+import Connection from './components/UserConnection/Connection';
 
 const URL = "http://localhost:9000/testAPI";
 
@@ -49,6 +50,7 @@ class App extends React.Component {
         </div>
         <Chat />
         <Echo />
+        <Connection />
       </div>
     );
 
