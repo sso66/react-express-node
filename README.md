@@ -128,7 +128,7 @@
     - EchoChamber/
       - Echo.jsx
       - Echo.sass
-    - RealTimeWeb/
+    - UserAccount/
     - Site/
    - constants/
   - views/
