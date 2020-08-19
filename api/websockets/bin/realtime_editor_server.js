@@ -2,7 +2,7 @@
 // Date: 8/19/2020
 // Note: Websockets: How to go real-time with Node.js and React.jsx
 //..............................................................................
-console.log( "Mounting WebSocket editor_server.js..." );
+console.log( "Mounting WebSocket realtime_editor_server.js..." );
 
 const webSocketServer = require('websocket').server;
 const http = require('http');
