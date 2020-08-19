@@ -123,7 +123,7 @@
       - ChatInput.jsx
       - ChatMessage.jsx
       - index.jsx
-    - CopyEditor/
+    - RealTimeEditor/
       - EditorClient.css
       - EditorClient.jsx
       - index.jsx
