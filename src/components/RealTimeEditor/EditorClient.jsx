@@ -14,7 +14,8 @@ import {
 import Editor from 'react-medium-editor';
 import 'medium-editor/dist/css/medium-editor.css';
 import 'medium-editor/dist/css/themes/default.css';
-import './EditorClient.css';
+// import './EditorClient.css';
+import './EditorClient.sass';
 
 console.log( "Mounting EditorClient.jsx..." );
 
@@ -110,6 +111,7 @@ class App extends React.Component {
                         name="username" 
                         ref={(input) => { this.username = input; }} 
                         className="form-control" 
+                        autoComplete='off'
                     />
                     <button 
                         type="button" onClick={() => this.logInUser()} 
