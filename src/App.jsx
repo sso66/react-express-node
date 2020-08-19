@@ -8,7 +8,7 @@ import './App.sass';
 // import Chat from './components/ChatRoom/Chat';
 // import Echo from './components/EchoChamber/Echo';
 // import Connection from './components/UserAccount/Connection';
-import EditorClient from './components/CopyEditor/EditorClient';
+import EditorClient from './components/RealTimeEditor/EditorClient';
 
 const URL = "http://localhost:9000/testAPI";
 
@@ -36,7 +36,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+        {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
             Edit <code>src/App.jsx</code> and save to reload.
@@ -52,7 +52,7 @@ class App extends React.Component {
         </header>
         <div className='fetch-api'>
             <p>Message: {this.state.apiResponse}</p>
-        </div>
+        </div> */}
         {/* <Chat /> */}
         {/* <Echo /> */}
         {/* <Connection /> */}

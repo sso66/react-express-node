@@ -1,5 +1,5 @@
-// File: editor_server.js
-// Date: 8/18/2020
+// File: realtime_editor_server.js
+// Date: 8/19/2020
 // Note: Websockets: How to go real-time with Node.js and React.jsx
 //..............................................................................
 console.log( "Mounting WebSocket editor_server.js..." );
