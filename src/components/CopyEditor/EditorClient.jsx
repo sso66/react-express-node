@@ -1,5 +1,5 @@
-// File: components/CopyEditor/Editor.jsx
-// Date: 8/18/2020
+// File: components/CopyEditor/EditorClient.jsx
+// Date: 8/19/2020
 // Note: Websockets: How to go real-time with Node.js and React.jsx
 //..............................................................................
 import React from 'react';

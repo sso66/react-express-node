@@ -7,7 +7,7 @@ console.log( "Mounting WebSocket editor_server.js..." );
 const webSocketServer = require('websocket').server;
 const http = require('http');
 
-// Spinning the http server and the websocket server.
+// Spin the http server and the websocket server.
 const server = http.createServer();
 const webSocketsServerPort = 8000;
 
@@ -17,9 +17,9 @@ const wsServer = new webSocketServer({
     httpServer: server
 });
 
-// List all connected sessions & communicating with a specific session only
+
 function originIsAllowed(origin) {
-    // put logic here to dectet whether the specific origin is allowed
+    // put logic here to detect whether the specific origin is allowed
     return true;
 }
 
@@ -46,8 +46,9 @@ const messageType = {
   CONTENT_CHANGE: "contentchange"
 }
 
+// Sending the current data to all connected clients
 const sendMessage = (json) => {
-    // We are sending the current data to all connected clients
+
     Object.keys(clients).map((client) => {
         clients[client].sendUTF(json);
     });

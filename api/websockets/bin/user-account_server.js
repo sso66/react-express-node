@@ -1,9 +1,9 @@
 #!/websockets/bin/env node
-// File: connection_server.js
+// File: user_account_server.js
 // Date: 8/17/2020
 // Note: WebSocket server implementation with 'websocket' NPM
 
-console.log("\nMounting connection_server...");
+console.log("\nMounting user_account_server...");
 // List all the connected sessions & communicating with a specific session only.
 //
 // The WebSocket application developers are expected to keep references to open 
