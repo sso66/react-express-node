@@ -104,7 +104,7 @@
   - websockets/
     - bin/  
       - chat_server.js
-      - connection_server.js
+      - user_account_server.js
       - editor_server.js
       - www (a.k.a. echo_protocol_server.js)
     - nodejs_client.js (a.k.a echo_client.js)
@@ -126,12 +126,15 @@
     - CopyEditor/
       - EditorClient.css
       - EditorClient.jsx
+      - index.jsx
     - EchoChamber/
       - Echo.jsx
       - Echo.sass
+      - index.jsx
     - UserAccount/
-      - Connection.jsx
-      - Connection.sass
+      - User.jsx
+      - User.sass
+      - index.jsx
     - Site/
    - constants/
   - views/
