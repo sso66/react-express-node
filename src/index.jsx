@@ -1,12 +1,13 @@
 // File: index.jsx
-// Date: 8/18/2020
-// Note: Main entry point to UI Application
+// Date: 8/20/2020
+// Note: Main entry point: UIScreen/UIWindow
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.sass';
+
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import './index.sass';
 
 ReactDOM.render(
   <React.StrictMode>

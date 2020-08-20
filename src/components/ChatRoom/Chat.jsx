@@ -1,16 +1,18 @@
 // File: ChatMessage.jsx
-// Date: 8/18/2020
+// Date: 8/20/2020
 // Note: Chat container component - UIViewController
 
 import React from 'react';
 import ChatInput from './ChatInput'
 import ChatMessage from './ChatMessage'
+import './Chat.sass';
 
 const URL = 'ws://localhost:3030'
 
 class Chat extends React.Component {
   state = {
-    name: 'Jack',
+    userid : '506874',
+    username: 'Jack',
     messages: [],
   }
 
@@ -43,7 +45,7 @@ class Chat extends React.Component {
   submitMessage = messageString => {
     // on submitting the ChatInput form, send the message, add it 
     // to the list and reset the input
-    const message = { name: this.state.name, message: messageString }
+    const message = { username: this.state.username, message: messageString }
     this.ws.send(JSON.stringify(message))
     this.addMessage(message)
   }
@@ -51,24 +53,25 @@ class Chat extends React.Component {
   render() {
     return (
       <div className='chat'>
-        <label htmlFor="name">
+        <label htmlFor="username">
           Name:&nbsp;
           <input
             type="text"
-            id={'name'}
-            placeholder={'Enter your name...'}
-            value={this.state.name}
-            onChange={e => this.setState({ name: e.target.value })}
+            id={'username'}
+            placeholder={'Enter your username...'}
+            value={this.state.username}
+            onChange={e => this.setState({ username: e.target.value })}
           />
         </label>
         <ChatInput
+          ws={this.ws}
           onSubmitMessage={messageString => this.submitMessage(messageString)}
         />
         {this.state.messages.map((message, index) =>
           <ChatMessage
             key={index}
             message={message.message}
-            name={message.name}
+            name={message.username}
           />
         )}
       </div>

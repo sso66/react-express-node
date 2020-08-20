@@ -1,14 +1,14 @@
 // File: App.jsx
-// Date: 8/18/2020
-// Note: Main entry point to UI View
+// Date: 8/20/2020
+// Note: Main entry point: UIApplication/UIView
 
 import React from 'react';
 // import logo from './logo.svg';
 import './App.sass';
-// import Chat from './components/ChatRoom/Chat';
+import Chat from './components/ChatRoom/Chat';
 // import Echo from './components/EchoChamber/Echo';
 // import Connection from './components/UserAccount/Connection';
-import EditorClient from './components/RealTimeEditor/EditorClient';
+// import EditorClient from './components/RealTimeEditor/EditorClient';
 
 const URL = "http://localhost:9000/testAPI";
 
@@ -30,7 +30,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.callAPI();
+    // this.callAPI();
   }
 
   render() {
@@ -53,10 +53,10 @@ class App extends React.Component {
         <div className='fetch-api'>
             <p>Message: {this.state.apiResponse}</p>
         </div> */}
-        {/* <Chat /> */}
+        <Chat />
         {/* <Echo /> */}
         {/* <Connection /> */}
-        <EditorClient />
+        {/* <EditorClient /> */}
       </div>
     );
 

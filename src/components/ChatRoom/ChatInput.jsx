@@ -1,10 +1,10 @@
 // File: ChatInput.jsx
-// Date: 8/13/2020
+// Date: 8/20/2020
 // Note: Chat user input component - UIView
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Chat.sass';
+
 
 console.log("Mounting ChatInput.jsx...\n");
 
