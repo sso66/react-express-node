@@ -12,6 +12,7 @@ import {
   UncontrolledTooltip
 } from 'reactstrap';
 import Editor from 'react-medium-editor';
+
 import 'medium-editor/dist/css/medium-editor.css';
 import 'medium-editor/dist/css/themes/default.css';
 // import './EditorClient.css';
@@ -28,7 +29,7 @@ const messageType = {
     CONTENT_CHANGE: "contentchange"
 }
 
-class App extends React.Component {
+class EditorClient extends React.Component {
     constructor(props) {
         super(props);
 
@@ -44,8 +45,11 @@ class App extends React.Component {
         const username = this.username.value;
 
         if (username.trim()) {
-            const data = { username };
+            const data = { 
+                username 
+            };
             this.setState({...data}, () => {
+                // send username to server 
                 client.send(JSON.stringify({
                     ...data,
                     type: messageType.USER_EVENT
@@ -54,26 +58,27 @@ class App extends React.Component {
         }
     }
 
-    // When content changes, we send the current content of the editor to the server.
     onEditorStateChange = (text) => {
+        // When content changes, send the current content of the editor to the server.
         client.send(JSON.stringify({
             type: messageType.CONTENT_CHANGE,
             username: this.state.username,
-            content: text
+            content: text,
         }));
     };
 
     componentDidMount() {
-        client.onerror = (err) => {
-            console.log(err.id + " : " + err.name);
-        }
+        // client.onerror = (event) => {
+        //     console.log(event.id + " : " + event.name);
+        // }
 
         client.onopen = () => {
             console.log('WebSocket Client Connected');
         }
 
-        client.onmessage = (message) => {
-            const dataFromServer = JSON.parse(message.data);
+        client.onmessage = (event) => {
+            // receive assorted types of data packets from server
+            const dataFromServer = JSON.parse(event.data);
             const stateToChange = {};
 
             if (dataFromServer.type === messageType.USER_EVENT) {
@@ -81,7 +86,6 @@ class App extends React.Component {
             } else if (dataFromServer.type === messageType.CONTENT_CHANGE) {
                 stateToChange.text = dataFromServer.data.editorContent || contentDefaultMessage;
             }
-
             stateToChange.userActivity = dataFromServer.data.userActivity;
             
             this.setState({
@@ -89,9 +93,9 @@ class App extends React.Component {
             });
         }
 
-        client.close = () => {
-            console.log('Close the connection.')
-        }
+        // client.onclose = (event) => {
+        //     console.log('Close the connection.')
+        // }
     }
 
     showLoginSection = () => (
@@ -102,21 +106,20 @@ class App extends React.Component {
                         <Identicon 
                             className="account__avatar" 
                             size={64} 
-                            string="randomness" 
-                        />
+                            string="randomness" />
                         <p className="account__name">Hello, user!</p>
                         <p className="account__sub">Join to edit the document</p>
                     </div>
+
                     <input 
                         name="username" 
                         ref={(input) => { this.username = input; }} 
                         className="form-control" 
-                        autoComplete='off'
-                    />
+                        autoComplete='off' />
+
                     <button 
                         type="button" onClick={() => this.logInUser()} 
-                        className="btn btn-primary account__btn"
-                    >
+                        className="btn btn-primary account__btn">
                             Join
                     </button>
                 </div>
@@ -139,13 +142,11 @@ class App extends React.Component {
                                 className="account__avatar" 
                                 style={{ backgroundColor: user.randomcolor }} 
                                 size={40} 
-                                string={user.username} 
-                            />
+                                string={user.username} />
                         </span>
                         <UncontrolledTooltip 
                             placement="top" 
-                            target={user.username}
-                        >
+                            target={user.username}>
                             {user.username}
                         </UncontrolledTooltip>
                     </React.Fragment>
@@ -191,6 +192,6 @@ class App extends React.Component {
     }
 }
 
-export default App;
+export default EditorClient;
 
 // eof 

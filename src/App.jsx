@@ -3,7 +3,7 @@
 // Note: Main entry point to UI View
 
 import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.sass';
 // import Chat from './components/ChatRoom/Chat';
 // import Echo from './components/EchoChamber/Echo';
