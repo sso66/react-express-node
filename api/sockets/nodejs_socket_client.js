@@ -9,9 +9,11 @@ const net = require('net');
 // Connect to a server @ port 9898
 const client = net.createConnection({ port: 9898 }, () => {
   console.log('CLIENT: I have been connected to the server.');
+  // Sending data to server
   client.write('CLIENT: Hello this is client!');
 });
 
+// Receiving data from server
 client.on('data', (data) => {
   console.log(data.toString());
   client.end();
@@ -23,9 +25,9 @@ client.on('end', () => {
 
 // The client scripts attempts to connect to the localhost:9898. If the
 // connection succeeds, then the clinent sends a string to the server 
-// over the open socket. It says "CLIENT:L Hello this is client!" 
+// over the open socket. It says "CLIENT: Hello this is client!" 
 // Whenever the server sends some data to the client, the client logs
-// it in the 'data' event handler.
+// the contents in the 'data' event handler.
 
 
 // eof

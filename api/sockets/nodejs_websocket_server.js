@@ -26,10 +26,10 @@ wsServer.on('request', function(request) {
     });
 })
 
-// This code users the Node.js native "http" package module library and 3rd party
-// WebSocket NPM to create a standard WebSocket server. It has the same functionality as the
-// nodejs_socket_server.js. Here this script is using the official WebSocket protocol
-// to bi-directionally send or data between the client(s) and the server.
+// This code uses the Node.js native "http" package module library and 3rd party
+// WebSocket NPM to create a standard WebSocket server. It has the same functionality as 
+// the nodejs_socket_server.js. Here this script is using the standard WebSocket protocol
+// to bi-directionally send and receive data between the client(s) and the server.
 
 
 // eof

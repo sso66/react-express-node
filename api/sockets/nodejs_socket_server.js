@@ -15,10 +15,11 @@ const net = require('net');
 
 // Create a server object
 const server = net.createServer((socket) => {
+    // Receiving data from client
     socket.on('data', (data) => {
       console.log(data.toString());
     });
-  
+    // Sending data to client
     socket.write('SERVER: Hello! This is server speaking.\n');
     socket.end('SERVER: Closing connection now.\n');
   }).on('error', (err) => {
@@ -30,7 +31,7 @@ const server = net.createServer((socket) => {
     console.log('opened server on', server.address().port);
   });
 
-// This script reuns a Node.js socket server on port 9898. Whenever a client
+// This script runs a Node.js socket server on port 9898. Whenever a client
 // connects to this server app (IP_ADDRESS: 9898) the server sends the client
 // a string over the open socket. It says "SERVER: Hello! This is server
 // speaking." Whenever the clinet sends some data to the server, the Node.js
