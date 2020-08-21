@@ -97,8 +97,10 @@
     - testAPI.js
     - users.js
   - sockets/
-    - nodejs_socket_server.js
     - nodejs_socket_client.js
+    - nodejs_socket_server.js
+    - nodejs_websocket_client.html    
+    - nodejs_websocket_server.js
   - views/
     - error.jade
     - index.jade
