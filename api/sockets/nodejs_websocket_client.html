@@ -11,13 +11,15 @@
         // It is automatically accessible to this WebSocket API.
         const websocket = new WebSocket('ws://localhost:9898/');
 
+        // Sending data to server
         websocket.onopen = function() {
             console.log('WebSocket Client Connected');
             websocket.send('Hi this is WebSocket brower client.');
         };
 
-        websocket.onmessage = function(e) {
-            console.log("Received: '" + e.data + "'");
+        // Receiving data from server
+        websocket.onmessage = function(event) {
+            console.log("Received: '" + event.data + "'");
         };
     </script>
 </html>
