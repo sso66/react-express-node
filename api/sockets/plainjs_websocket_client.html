@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WebSocket Playground</title>
+    </head>
+    <body>
+        <div>WebSocket Browser Client</div>
+    </body>
+    <script>
+        // The standard WebSocket class in the browser need no declaration.
+        // It is automatically accessible to this WebSocket API.
+        const websocket = new WebSocket('ws://localhost:9898/');
+
+        websocket.onopen = function() {
+            console.log('WebSocket Client Connected');
+            websocket.send('Hi this is WebSocket brower client.');
+        };
+
+        websocket.onmessage = function(e) {
+            console.log("Received: '" + e.data + "'");
+        };
+    </script>
+</html>
