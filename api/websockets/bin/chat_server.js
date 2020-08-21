@@ -6,7 +6,7 @@ console.log("Mounting WebSocket chat_server.js...\n");
 
 class Clients {
     constructor() {
-        this.clientList = { username: 'Ace' };
+        this.clientList = {};
         this.saveClient = this.saveClient.bind(this);
     }
     saveClient(username, client) {
@@ -33,10 +33,12 @@ wss.on('connection', function connection(ws) {
 
         wss.clients.forEach(function each(client) {
             if (client !== ws && client.readyState === WebSocket.OPEN) {
-                // BROADCAST: On each incoming messages it sends it back to all connected clients.
+                // BROADCAST: On each incoming messages it sends it back 
+				// to all connected clients.
                 client.send(msg);
                 
-                // UNICAST: On each incoming messages it sends it back to specific connected client.
+                // UNICAST: On each incoming messages it sends it back 
+				// to specific connected client.
                 // clients.clientList[ws].send();
             }
         })
