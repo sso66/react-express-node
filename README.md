@@ -101,6 +101,10 @@
     - nodejs_socket_server.js
     - nodejs_websocket_client.html    
     - nodejs_websocket_server.js
+    - udp_server.js
+    - udp_client.js
+    - udp_socket_server.js
+    - udp_socket_client.js
   - views/
     - error.jade
     - index.jade
