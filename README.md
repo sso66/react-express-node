@@ -96,7 +96,9 @@
     - index.js
     - testAPI.js
     - users.js
-  - utils/
+  - sockets/
+    - nodejs_socket_server.js
+    - nodejs_socket_client.js
   - views/
     - error.jade
     - index.jade
