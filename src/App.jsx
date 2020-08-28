@@ -1,12 +1,12 @@
 // File: App.jsx
 // Date: 8/20/2020
-// Note: Main entry point: UIApplication/UIView
+// Note: Main entry point: UIApplication-UIView-UIComponent
 
 import React from 'react';
 // import logo from './logo.svg';
 import './App.sass';
-import Chat from './components/ChatRoom/Chat';
-// import Echo from './components/EchoChamber/Echo';
+// import Chat from './components/ChatRoom/Chat';
+import Echo from './components/EchoChamber/Echo';
 // import Connection from './components/UserAccount/Connection';
 // import EditorClient from './components/RealTimeEditor/EditorClient';
 
@@ -53,8 +53,8 @@ class App extends React.Component {
         <div className='fetch-api'>
             <p>Message: {this.state.apiResponse}</p>
         </div> */}
-        <Chat />
-        {/* <Echo /> */}
+        {/* <Chat /> */}
+        <Echo />
         {/* <Connection /> */}
         {/* <EditorClient /> */}
       </div>
