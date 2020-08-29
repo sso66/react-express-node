@@ -1,7 +1,7 @@
-// File: chat_server.js
-// Date: 8/20/2020
+// File: chat-server.js
+// Date: 8/29/2020
 // Note: WebSocket server implementation with 'ws' NPM
-
+//................................................................................
 console.log("Mounting WebSocket chat_server.js...\n");
 
 class Clients {
@@ -9,6 +9,7 @@ class Clients {
         this.clientList = {};
         this.saveClient = this.saveClient.bind(this);
     }
+
     saveClient(username, client) {
         this.clientList[username] = client;
     }
@@ -44,6 +45,5 @@ wss.on('connection', function connection(ws) {
         })
     });   
 });
-
 
 // eof

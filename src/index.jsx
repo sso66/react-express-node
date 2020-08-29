@@ -1,7 +1,7 @@
 // File: index.jsx
-// Date: 8/20/2020
-// Note: Main entry point: UIWindow-UIScreen-UIStyle
-
+// Date: 8/29/2020
+// Note: Main entry point to/from: UIWindow-UIScreen-UIStyle
+//................................................................................
 import React from 'react';
 import ReactDOM from 'react-dom';
 

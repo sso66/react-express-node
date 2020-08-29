@@ -1,27 +1,27 @@
-// File: ChatMessage.jsx
-// Date: 8/20/2020
-// Note: Chat container component - UIViewController
-
-import React from 'react';
+// File: ChatProcess.jsx
+// Date: 8/29/2020
+// Note: Chat Process component - UIViewController
+//................................................................................
+import React, { Component } from 'react'
 import ChatInput from './ChatInput'
-import ChatMessage from './ChatMessage'
-import './Chat.sass';
+import ChatMessage from './ChatOutput'
+
+import './Chat.sass'
 
 const URL = 'ws://localhost:3030'
 
-class Chat extends React.Component {
+class ChatProcess extends Component {
   state = {
-    userid : '506874',
-    username: 'Jack',
+    name: 'Ace | King | Queen | Jack',
     messages: [],
   }
 
   ws = new WebSocket(URL)
 
   componentDidMount() {
-    this.ws.onopen = () => {
-      // on connecting, do nothing but log it to the console
-      console.log('connected')
+      this.ws.onopen = () => {
+        // on connecting, do nothing but log it to the console
+        console.log('connected')
     }
 
     this.ws.onmessage = evt => {
@@ -43,24 +43,23 @@ class Chat extends React.Component {
     this.setState(state => ({ messages: [message, ...state.messages] }))
 
   submitMessage = messageString => {
-    // on submitting the ChatInput form, send the message, add it 
-    // to the list and reset the input
-    const message = { username: this.state.username, message: messageString }
+    // on submitting the ChatInput form, send the message, add it to the list and reset the input
+    const message = { name: this.state.name, message: messageString }
     this.ws.send(JSON.stringify(message))
     this.addMessage(message)
   }
 
   render() {
     return (
-      <div className='chat'>
-        <label htmlFor="username">
+      <div className="chat">
+        <label htmlFor="name">
           Name:&nbsp;
           <input
             type="text"
-            id={'username'}
-            placeholder={'Enter your username...'}
-            value={this.state.username}
-            onChange={e => this.setState({ username: e.target.value })}
+            id={'name'}
+            placeholder={'Enter your name...'}
+            value={this.state.name}
+            onChange={e => this.setState({ name: e.target.value })}
           />
         </label>
         <ChatInput
@@ -71,14 +70,12 @@ class Chat extends React.Component {
           <ChatMessage
             key={index}
             message={message.message}
-            name={message.username}
-          />
+            name={message.name}
+          />,
         )}
       </div>
     )
   }
 }
 
-export default Chat;
-
-// eof
+export default ChatProcess
