@@ -19,14 +19,14 @@ class ChatProcess extends Component {
   ws = new WebSocket(URL)
 
   componentDidMount() {
-      this.ws.onopen = () => {
-        // on connecting, do nothing but log it to the console
-        console.log('connected')
-    }
+    this.ws.onopen = () => {
+      // on connecting, do nothing but log it to the console
+      console.log('connected')
+  }
 
-    this.ws.onmessage = evt => {
-      // on receiving a message, add it to the list of messages
-      const message = JSON.parse(evt.data)
+  this.ws.onmessage = evt => {
+    // on receiving a message, add it to the list of messages
+    const message = JSON.parse(evt.data)
       this.addMessage(message)
     }
 
@@ -43,7 +43,8 @@ class ChatProcess extends Component {
     this.setState(state => ({ messages: [message, ...state.messages] }))
 
   submitMessage = messageString => {
-    // on submitting the ChatInput form, send the message, add it to the list and reset the input
+    // on submitting the ChatInput form, send the message, add it to 
+    // the list and reset the input
     const message = { name: this.state.name, message: messageString }
     this.ws.send(JSON.stringify(message))
     this.addMessage(message)
@@ -59,12 +60,16 @@ class ChatProcess extends Component {
             id={'name'}
             placeholder={'Enter your name...'}
             value={this.state.name}
-            onChange={e => this.setState({ name: e.target.value })}
+            onChange={
+              e => this.setState({ name: e.target.value })
+            }
           />
         </label>
         <ChatInput
           ws={this.ws}
-          onSubmitMessage={messageString => this.submitMessage(messageString)}
+          onSubmitMessage={
+              messageString => this.submitMessage(messageString)
+          }
         />
         {this.state.messages.map((message, index) =>
           <ChatMessage
@@ -79,3 +84,5 @@ class ChatProcess extends Component {
 }
 
 export default ChatProcess
+
+// eof
