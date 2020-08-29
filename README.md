@@ -126,10 +126,10 @@
 - src/
   - components/
     - ChatRoom/
-      - Chat.jsx
+      - ChatProcess.jsx
       - Chat.sass
       - ChatInput.jsx
-      - ChatMessage.jsx
+      - ChatOutput.jsx
       - index.jsx
     - RealTimeEditor/
       - EditorClient.css
