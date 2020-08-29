@@ -5,33 +5,34 @@
 import React, { Component } from 'react'
 import ChatInput from './ChatInput'
 import ChatMessage from './ChatOutput'
-
 import './Chat.sass'
+
+console.log("Mounting ChatProcess...");
 
 const URL = 'ws://localhost:3030'
 
 class ChatProcess extends Component {
   state = {
-    name: 'Ace | King | Queen | Jack',
+    name: 'Jack',
     messages: [],
   }
 
   ws = new WebSocket(URL)
 
   componentDidMount() {
-    this.ws.onopen = () => {
+    this.ws.onopen = (openEvent) => {
       // on connecting, do nothing but log it to the console
-      console.log('connected')
+      console.log('connected' + openEvent.data)
   }
 
-  this.ws.onmessage = evt => {
+  this.ws.onmessage = (messageEvent) => {
     // on receiving a message, add it to the list of messages
-    const message = JSON.parse(evt.data)
+    const message = JSON.parse(messageEvent.data)
       this.addMessage(message)
     }
 
-    this.ws.onclose = () => {
-      console.log('disconnected')
+    this.ws.onclose = (closeEvent) => {
+      console.log('disconnected' + closeEvent.data)
       // automatically try to reconnect on connection loss
       this.setState({
         ws: new WebSocket(URL),
@@ -58,7 +59,7 @@ class ChatProcess extends Component {
           <input
             type="text"
             id={'name'}
-            placeholder={'Enter your name...'}
+            placeholder={'Enter name...'}
             value={this.state.name}
             onChange={
               e => this.setState({ name: e.target.value })
@@ -66,7 +67,7 @@ class ChatProcess extends Component {
           />
         </label>
         <ChatInput
-          ws={this.ws}
+          // ws={this.ws}
           onSubmitMessage={
               messageString => this.submitMessage(messageString)
           }

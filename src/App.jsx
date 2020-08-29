@@ -14,7 +14,7 @@ import Chat from './components/Chat/ChatProcess'
 
 console.log("Mounting App.jsx...\n");
 
-const URL = "http://localhost:9000/testAPI";
+const URL = "http://localhost:9000/testAPI";  // connect to api/bin/www
 
 class App extends Component {
   constructor(props) {
@@ -34,7 +34,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    // this.callAPI();
+    this.callAPI();
   }
 
   render() {
@@ -44,9 +44,9 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        {/* <div className='fetch-api'>
-            <p>Message: {this.state.apiResponse}</p>
-        </div>  */}
+        <div className='fetch-api'>
+            <p>HTTP message: {this.state.apiResponse}</p>
+        </div> 
         <Chat />
         {/* <Echo /> */}
         {/* <Connection /> */}
