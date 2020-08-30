@@ -115,6 +115,7 @@
       - user_account_server.js
       - editor_server.js
       - www (a.k.a. echo_protocol_server.js)
+    - chat-client.js
     - nodejs_client.js (a.k.a echo_client.js)
     - w3c_websocket_client.js (a.k.a echo_client.js)
   - app.js
