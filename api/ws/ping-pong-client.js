@@ -25,13 +25,15 @@ function heartbeat() {
 // plus a conservative assumption of the latency.
 this.pingTimeout = setTimeout(() => {
     this.delete;
-}, 30000 + 1000);
+
+}, 3000 + 100);
 
 const client = new WebSocket('ws://localhost:8080/');
 
 client.on('open', heartbeat);           // Agenda 1
 client.on('ping', heartbeat);           // Agenda 2
 client.on('close', function clear() {   // Agenda 1
+    console.log("server pull the cord!");
     clearTimeout(this.pingTimeout);     // Agenda 2
 });
 // eof
