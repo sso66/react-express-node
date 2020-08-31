@@ -32,45 +32,44 @@ class Clients {
 // their respective usernames as a key/value pair.
 
 // The server relies on an intital message from the client with a username.
-// Upon the first and first message, the 'clients' instance store the client
-// object as value of the username key:
+// Upon the connection and first message, the 'clients' instance store the 
+// client object as value of the username key:
 
 // Create WebSocket server that transmit all messages to everyone that's connected.
 const WebSocket = require('ws');
-const wss = new WebSocket.Server({ port: 3030 });
-
+const server = new WebSocket.Server({ port: 3030 });
 const clients = new Clients();
 
 // Keep track of clients with WebSocket connection 
-wss.on('connection', function connection(ws) {
+server.on('connection', function connection(websocket) {
     // Receive message from client
-    ws.on('message', function incoming(msg) {
+    websocket.on('message', function incoming(msg) {
         const parsedMsg = JSON.parse(msg); 
-        clients.saveClient(parsedMsg, ws);
+        clients.saveClient(parsedMsg, websocket);
         
         console.log('Receive and display specific client and a message:');
         const stringifyMsg = JSON.stringify(parsedMsg);
         console.log('JSON.stringify Msg: ' + stringifyMsg + '\n');
 
-        wss.clients.forEach(function each(client) {
-            if (client !== ws && client.readyState === WebSocket.OPEN) {
+        server.clients.forEach(function each(client) {
+            if (client !== websocket && client.readyState === WebSocket.OPEN) {
                 // BROADCAST: On each incoming messages it sends it back 
 				// to all connected clients.
                 client.send(msg);
                 
                 // UNICAST: On each incoming messages it sends it back 
-				// to specific connected client with user id.
+				// to specific connected client with username.
                 // clients.clientList[ws].send();
             }
         })
     });   
 });
 
-// Multiple clients can be store and grouped for simple or complex applications
+// Multiple clients can be stored and grouped for simple or complex applications
 // and can be easily retrieved for intitiating messages to clietn(s) in an 
 // intuitive way:
 //
-// clients.clientList['JSmith1234].send();
+// clients.clientList['JSmith1234'].send();
 
 
 // eof
