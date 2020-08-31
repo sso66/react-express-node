@@ -120,6 +120,8 @@
   - ws/
     - binary-client.js
     - chat-client.js
+    - ping-pong-client.js
+    - ping-pong-server.js
     - simple-client.js
     - simple-server.js
   - app.js
