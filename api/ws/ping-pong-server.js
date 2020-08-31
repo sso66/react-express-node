@@ -7,7 +7,7 @@ console.log("Mounting WebSocket ping-pong-server.js...PORT:8080\n");
 
 //--------------------------------------------------------------------------------
 // ___ Algorithm @ abstract ___
-// 1. At anypoint after the handshake connection (Agenda 1), the client or the 
+// 1. At anypoint after the handshake connection, the client or the 
 // the server can choose to send a ping to other party.
 //
 // 2. When the ping is received, the reciepient must send back a pong as soon as
@@ -30,7 +30,34 @@ console.log("Mounting WebSocket ping-pong-server.js...PORT:8080\n");
 //
 // If you have gotten (received) more than one ping before (previous) you get a
 // chance to send a pong, you send only one pong.
-
-
 //--------------------------------------------------------------------------------
+const WebSocket = require('ws');
+
+function noop() {} // empty function object (no operation)
+
+function heartbeat() {
+    console.log("pong!")
+    this.isAlive = true;    // state of WebSocket class object
+}
+
+const wss = new WebSocket.Server({ port: 8080 });
+
+wss.on('connection', function connection(ws) {  // Agenda 1.
+    ws.isAlive = true;  // state of the instance of WebSocket class object
+    ws.on('pong', heartbeat);   // Agenda 2.
+});  
+
+const interval = setInterval(function ping() {
+    wss.clients.forEach(function each(ws) {
+        if (ws.isAlive === false) return ws.terminate();
+
+        ws.isAlive = false;
+        ws.ping(noop);
+    });
+}, 30000);
+
+wss.on('close', function(close) {
+    clearInterval(interval);
+});
+
 // eof
