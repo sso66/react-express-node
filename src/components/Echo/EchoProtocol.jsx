@@ -1,17 +1,18 @@
-// File: components/EchoChamber/Echo.jsx
-// Date: 8/18/2020
-// Note: WebSocket client implementation with 'websocket' NPM
-
+// File: components/Echo/EchoProtocol.jsx
+// Date: 8/29/2020
+// Note: The official WebSocket client implemented with 3rd party 'websocket' NPM
+//................................................................................
 import React from 'react';
 import { w3cwebsocket as W3CWebSocket } from 'websocket';
-import './Echo.sass';
+import './EchoProtocol.sass';
 
 // A simple React.jsx client using W3C WebSocket API with echo-protocol.
 console.log("\nMounting Echo.jsx (a.k.a. w3c_websocket.js)...");
 
+// connecting to websockets/bin/www (a.k.a. echo-protocol-server.js)
 const client = new W3CWebSocket('ws://127.0.0.1:8080/', 'echo-protocol');
 
-class Echo extends React.Component {
+class EchoProtocol extends React.Component {
     state = {
         message: "Hello W3C WebSocket!",
     }
@@ -64,6 +65,6 @@ class Echo extends React.Component {
     }
 }
 
-export default Echo;
+export default EchoProtocol;
 
 // eof

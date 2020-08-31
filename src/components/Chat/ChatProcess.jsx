@@ -1,37 +1,45 @@
 // File: ChatProcess.jsx
 // Date: 8/29/2020
-// Note: Chat Process component - UIViewController
+// Note: The official WebSocket chat process component - UIViewController
 //................................................................................
 import React, { Component } from 'react'
 import ChatInput from './ChatInput'
 import ChatMessage from './ChatOutput'
 import './Chat.sass'
 
-console.log("Mounting ChatProcess...");
+console.log("Mounting ChatProcess.jsx...");
 
+// URL = PROTOCOL://HOST:PORT
 const URL = 'ws://localhost:3030'
+
+// Create component that will be the center logic. It holds
+// the state object, the connection and also send and receive messages.
 
 class ChatProcess extends Component {
   state = {
-    name: 'Jack',
+    name: '',
     messages: [],
   }
 
   ws = new WebSocket(URL)
 
   componentDidMount() {
-    this.ws.onopen = (openEvent) => {
+    this.ws.onopen = openEvent => {
       // on connecting, do nothing but log it to the console
       console.log('connected' + openEvent.data)
-  }
+    }
+    
+    this.ws.onError = errorEvent => {
+      console.error('error: ' + errorEvent.code)
+    }
 
-  this.ws.onmessage = (messageEvent) => {
-    // on receiving a message, add it to the list of messages
-    const message = JSON.parse(messageEvent.data)
+    this.ws.onmessage = messageEvent => {
+      // on receiving a message, add it to the list of messages
+      const message = JSON.parse(messageEvent.data)
       this.addMessage(message)
     }
 
-    this.ws.onclose = (closeEvent) => {
+    this.ws.onclose = closeEvent => {
       console.log('disconnected' + closeEvent.data)
       // automatically try to reconnect on connection loss
       this.setState({
@@ -83,6 +91,11 @@ class ChatProcess extends Component {
     )
   }
 }
+
+// It creates a new WebSocket instance and adds handlers for messages
+// as well as opening and closing connection. It passes the onSubmitMessage
+// prop to ChatInput which actually sends the message to the Node.js backend
+// chat-server.js running on 127.0.0.1 port:3030.
 
 export default ChatProcess
 

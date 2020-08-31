@@ -1,8 +1,8 @@
 // File: chat-server.js
 // Date: 8/29/2020
-// Note: Simple WebSocket server implemented with 'ws' NPM
+// Note: Chat WebSocket server implemented with 3rd party 'ws' NPM
 //................................................................................
-console.log("Mounting WebSocket chat-server.js...PORT: 3030\n");
+console.log("Mounting WebSocket chat-server.js...PORT:3030\n");
 
 // How to keep track of clients with WebSocket object?
 // With the introduction of HTML5, Websockets developers can leverage a 
@@ -48,9 +48,9 @@ wss.on('connection', function connection(ws) {
         const parsedMsg = JSON.parse(msg); 
         clients.saveClient(parsedMsg, ws);
         
-        console.log('receive and display specific client and the message:');
+        console.log('Receive and display specific client and a message:');
         const stringifyMsg = JSON.stringify(parsedMsg);
-        console.log('stringifyMsg: ' + stringifyMsg + '\n');
+        console.log('JSON.stringify Msg: ' + stringifyMsg + '\n');
 
         wss.clients.forEach(function each(client) {
             if (client !== ws && client.readyState === WebSocket.OPEN) {

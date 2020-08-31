@@ -1,6 +1,6 @@
 // File: ChatInput.jsx
 // Date: 8/29/2020
-// Note: Chat user input component - UIView
+// Note: The official WebSocket chat user input component - UIView
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
@@ -9,6 +9,7 @@ console.log("Mounting ChatInput.jsx...\n");
 
 class ChatInput extends Component {
   static propTypes = {
+    // receive one prop from the parent component
     onSubmitMessage: PropTypes.func.isRequired,
   }
   state = {
