@@ -6,8 +6,8 @@ import React, { Component } from 'react'
 import logo from './logo.svg'
 import './App.sass'
 
-// import Chat from './components/Chat/ChatProcess'
-import Echo from './components/Echo/EchoProtocol';
+import Chat from './components/Chat/ChatProcess'
+// import Echo from './components/Echo/EchoProtocol';
 // import Connection from './components/UserAccount/Connection';
 // import EditorClient from './components/RealTimeEditor/EditorClient';
 // import WebSocketURLClient from './components/WebSocket/WebSocketURLClient'
@@ -47,8 +47,8 @@ class App extends Component {
         <div className='fetch-api'>
             <p>HTTP message: {this.state.apiResponse}</p>
         </div> 
-        {/* <Chat /> */}
-        <Echo />
+        <Chat />
+        {/* <Echo /> */}
         {/* <Connection /> */}
         {/* <EditorClient /> */}
         {/* <WebSocketURLClient /> */}

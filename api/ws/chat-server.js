@@ -32,10 +32,10 @@ class Clients {
 // their respective usernames as a key/value pair.
 
 // The server relies on an intital message from the client with a username.
+//
 // Upon the connection and first message, the 'clients' instance store the 
 // client object as value of the username key:
 
-// Create WebSocket server that transmit all messages to everyone that's connected.
 const WebSocket = require('ws');
 const server = new WebSocket.Server({ port: 3030 });
 const clients = new Clients();
@@ -52,13 +52,20 @@ server.on('connection', function connection(websocket) {
         console.log('JSON.stringify Msg: ' + stringifyMsg + '\n');
 
         server.clients.forEach(function each(client) {
+            // A client WebSocket broadcasting to all connect WebSocket clients, 
+            // including itself.
+            // if (client.readyState === WebSocket.OPEN) {
+            //     client.send(msg);
+            // }
+            // // A client WebSocket broadcasting to every other connected WebSocket 
+            // clients, exluding itself.
             if (client !== websocket && client.readyState === WebSocket.OPEN) {
-                // BROADCAST: On each incoming messages it sends it back 
-				// to all connected clients.
+                // On each incoming messages it sends it back  to all connected 
+                // clients in general.
                 client.send(msg);
                 
-                // UNICAST: On each incoming messages it sends it back 
-				// to specific connected client with username.
+                // On each incoming messages it sends it back to specific 
+                // connected client with username as identity.
                 // clients.clientList[ws].send();
             }
         })
