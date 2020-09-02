@@ -6,7 +6,7 @@ import React, { Component } from 'react'
 import logo from './logo.svg'
 import './App.sass'
 
-import Chat from './components/Chat/ChatProcess'
+// import Chat from './components/Chat/ChatProcess'
 // import Echo from './components/Echo/EchoProtocol';
 // import Connection from './components/UserAccount/Connection';
 // import EditorClient from './components/RealTimeEditor/EditorClient';
@@ -15,6 +15,8 @@ import Chat from './components/Chat/ChatProcess'
 console.log("Mounting App.jsx...\n");
 
 const URL = "http://localhost:9000/testAPI";  // connect to api/bin/www
+// const URL = "http://localhost:9000/users";  // connect to api/bin/www
+
 
 class App extends Component {
   constructor(props) {
@@ -47,7 +49,7 @@ class App extends Component {
         <div className='fetch-api'>
             <p>HTTP message: {this.state.apiResponse}</p>
         </div> 
-        <Chat />
+        {/* <Chat /> */}
         {/* <Echo /> */}
         {/* <Connection /> */}
         {/* <EditorClient /> */}
