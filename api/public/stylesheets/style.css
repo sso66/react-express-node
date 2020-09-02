@@ -1,6 +1,17 @@
 body {
+  background: gold;
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+p {
+  font-size: 1.2em
+}
+
+code {
+  font-size: 1.5em;
+  font-weight: 800;
+  color: purple;
 }
 
 a {

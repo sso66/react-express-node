@@ -19,7 +19,7 @@ console.log("users.js...");
 var express = require('express');
 var router = express.Router();
 
-var message = "<h2>This message from user route - The Real-Time Web, Delivered.</h2>";
+var message = "This message from users route - The Real-Time Web, Delivered.";
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {

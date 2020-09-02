@@ -36,10 +36,5 @@ ws.on('message', function incoming(data) {
         ws.send(Date.now());
     }, 500)
 });
-
-
  
-
-
-
 // eof
