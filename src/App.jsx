@@ -47,7 +47,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <div className='fetch-api'>
-            <p>HTTP message: {this.state.apiResponse}</p>
+            <p>client ping : {this.state.apiResponse}</p>
         </div> 
         {/* <Chat /> */}
         {/* <Echo /> */}
